@@ -4,6 +4,7 @@
  */
 
 import { useEffect, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { getArticleBySlug } from './data/articles';
 import {
   getCaseMainHtml,
@@ -270,11 +271,14 @@ export default function App() {
   }, []);
 
   return (
-    <div
-      ref={wrapperRef}
-      className="page-wrapper"
-      dangerouslySetInnerHTML={STATIC_HTML}
-    />
+    <>
+      <div
+        ref={wrapperRef}
+        className="page-wrapper"
+        dangerouslySetInnerHTML={STATIC_HTML}
+      />
+      <Analytics />
+    </>
   );
 }
 
