@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Preserve exact Webflow normalize & layout defaults over Tailwind preflight */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  border: 0;
+}
+
+video {
+  display: inline-block;
+  vertical-align: baseline;
+  max-width: none;
+  height: auto;
+}
